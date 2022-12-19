@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?&family=Poppins:wght@300;400;500;600;700&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+@layer base {
+    html {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+* {
+    scrollbar-width: thin;
+    /* scrollbar-color: var(--secondary) var(--primary); */
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    @apply appearance-none m-0;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    @apply w-2;
+}
+
+*::-webkit-scrollbar-track {
+    @apply bg-slate-700 rounded-md;
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply bg-slate-500 rounded-xl border-[3px] border-slate-700;
+}
+
+.no-scroll {
+    @apply md:bg-opacity-0 md:border-b-[1px] md:border-[#ccc] md:py-2;
+}
+
+.scroll {
+    @apply md:bg-[#31342b];
+}
+
+.form-letter__input {
+    @apply p-4 w-full mb-3 outline-none rounded-lg bg-[#d4ec70] text-[#000] 
+    text-lg transition duration-500;
+}
+
+.wrap-tree {
+    @apply flex flex-col gap-5 p-5 items-center justify-center md:flex-row;
+}
+
+.tree {
+    @apply flex flex-col gap-3 items-center justify-center;
+}
+
+.hide {
+    @apply translate-x-full opacity-0;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred,
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+    @apply h-[500px] overflow-y-scroll;
+}
+
+.form-group {
+    @apply relative w-full mb-3;
+}
+
+.form-label {
+    @apply block uppercase text-xs font-bold mb-2;
+}
+
+.form-input {
+    @apply border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+}
+
+.btn-submit {
+    @apply py-2 px-4 text-sm uppercase border border-primary1 rounded-lg mt-5 font-medium text-primary1 transition duration-500 hover:bg-primary1 hover:text-white;
+}
+
+.btn-disabled {
+    @apply disabled:bg-slate-300 disabled:hover:bg-slate-300 disabled:border-slate-300 disabled:text-white;
+}
